@@ -1,7 +1,48 @@
+//https://leetcode.com/litee/
 import java.util.*;
 
 public class Solution {
 
+    // Task 59. Spiral Matrix II   https://leetcode.com/problems/spiral-matrix-ii/
+    //Success
+    //Runtime: 0 ms, faster than 100.00% of Java online submissions for Spiral Matrix II.
+    //Memory Usage: 34.4 MB, less than 8.33% of Java online submissions for Spiral Matrix II.
+    public int[][] generateMatrix(int n) {
+        int fillNum = 1;
+        int[][] res = new int[n][n];
+        int up = 0;
+        int down = n - 1;
+        int left = 0;
+        int right = n - 1;
+
+        while (true) {
+            if (left > right) break;
+            for (int i = left; i <= right; i++) {  //up
+                res[up][i] = fillNum++;
+            }
+            up++;
+
+            if (up > down) break;
+            for (int i = up; i <= down; i++) {    //right
+                res[i][right] = fillNum++;
+            }
+            right--;
+
+            if (left > right) break;
+            for (int i = right; i >= left; i--) {  //down
+                res[down][i] = fillNum++;
+            }
+            down--;
+
+            if (up > down) break;
+            for (int i = down; i >= up; i--) {     //left
+                res[i][left] = fillNum++;
+            }
+            left++;
+        }
+        return res;
+    }
+//___________________________________________________________________________________________________________
     public int[][] merge(int[][] intervals) {
         List<IntervalsPoint> intervalsPoints = new ArrayList<>();
         List<IntervalsPoint> resList = new ArrayList<>();

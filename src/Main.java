@@ -6,16 +6,20 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[][] inArr = new int[2][2];
-        inArr[0][0] = 1;
-        inArr[0][1] = 3;
-        inArr[1][0] = 6;
-        inArr[1][1] = 9;
 
-        int[] secondArr = new int[2];
-        secondArr[0] = 2;
-        secondArr[1] = 5;
-        Tools.printSquareArr(new Solution().insert(inArr, secondArr));
+        Tools.printSquareArr(new Solution().generateMatrix(3));
+
+        //___________________________________________
+//        int[][] inArr = new int[2][2];
+//        inArr[0][0] = 1;
+//        inArr[0][1] = 3;
+//        inArr[1][0] = 6;
+//        inArr[1][1] = 9;
+//
+//        int[] secondArr = new int[2];
+//        secondArr[0] = 2;
+//        secondArr[1] = 5;
+//        Tools.printSquareArr(new Solution().insert(inArr, secondArr));
         //______________________________________________
 //        int[][] inArr = new int[3][2];
 ////        inArr[0][0] = 1;
