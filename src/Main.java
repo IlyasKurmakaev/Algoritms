@@ -1,3 +1,5 @@
+import Algoritms.LengthOfLastWord;
+
 import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Random;
@@ -7,9 +9,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Tools.printSquareArr(new Solution().generateMatrix(3));
+        System.out.println(new LengthOfLastWord().lengthOfLastWord("a"));
 
-        //___________________________________________
+//        Tools.printSquareArr(new Solution().generateMatrix(3));
+
+//___________________________________________
 //        int[][] inArr = new int[2][2];
 //        inArr[0][0] = 1;
 //        inArr[0][1] = 3;
