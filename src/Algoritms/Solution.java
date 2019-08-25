@@ -1,4 +1,4 @@
-//https://leetcode.com/litee/
+package Algoritms;//https://leetcode.com/litee/
 import java.util.*;
 
 public class Solution {
