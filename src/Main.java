@@ -1,8 +1,11 @@
+import Algoritms.DeleteDuplicates;
 import Algoritms.LengthOfLastWord;
 import Algoritms.ListNode;
 import Algoritms.RotateList;
+import com.sun.javafx.scene.traversal.Algorithm;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -10,7 +13,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(new RotateList().rotateRight(ListNode.generateListNode(4), 1));
+        System.out.println(new DeleteDuplicates().deleteDuplicates(Tools.generateListNode("11233")));
+        //        System.out.println(new RotateList().rotateRight(ListNode.generateListNode(4), 1));
 //        System.out.println(new LengthOfLastWord().lengthOfLastWord("a"));
 
 //        Tools.printSquareArr(new Algoritms.Solution().generateMatrix(3));

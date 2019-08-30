@@ -1,3 +1,7 @@
+import Algoritms.ListNode;
+
+import java.util.List;
+
 public class Tools {
     public static int[][] createIntSquareArr(int y, int x) {
         int[][] res = new int[y][x];
@@ -24,6 +28,16 @@ public class Tools {
             System.out.println();
         }
         System.out.println("_____________");
+    }
+
+    public static ListNode generateListNode(String str){
+        ListNode res = new ListNode(0);
+        ListNode start = res;
+        for (int i = 0; i < str.length(); i++) {
+            res.next = new ListNode(Integer.parseInt(str.substring(i, i + 1)));
+            res = res.next;
+        }
+        return start.next;
     }
 
     private static int getLengthOfInt(int arg) {
