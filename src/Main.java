@@ -1,7 +1,4 @@
-import Algoritms.DeleteDuplicates;
-import Algoritms.LengthOfLastWord;
-import Algoritms.ListNode;
-import Algoritms.RotateList;
+import Algoritms.*;
 import com.sun.javafx.scene.traversal.Algorithm;
 
 import java.sql.SQLOutput;
@@ -13,7 +10,9 @@ public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(new DeleteDuplicates().deleteDuplicates(Tools.generateListNode("11233")));
+        System.out.println(new PartitionList().partition(Tools.generateListNode("45389157"), 3));
+
+        //        System.out.println(new DeleteDuplicates().deleteDuplicates(Tools.generateListNode("11233")));
         //        System.out.println(new RotateList().rotateRight(ListNode.generateListNode(4), 1));
 //        System.out.println(new LengthOfLastWord().lengthOfLastWord("a"));
 
