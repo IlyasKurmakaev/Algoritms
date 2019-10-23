@@ -10,8 +10,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-
-        System.out.println(new ReverseBetween().reverseBetween(Tools.generateListNode("35"), 1, 2));
+        System.out.println(new InorderTraversal().inorderTraversal(Tools.generateTreeNode("1 34")));
+//        System.out.println(new ReverseBetween().reverseBetween(Tools.generateListNode("35"), 1, 2));
 
 //        System.out.println(new SubsetsII().subsetsWithDup(new int[]{1,2,2}));
         // System.out.println(new PartitionList().partition(Tools.generateListNode("45389157"), 3));

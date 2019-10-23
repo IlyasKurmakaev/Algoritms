@@ -1,5 +1,7 @@
 import Algoritms.ListNode;
+import Algoritms.TreeNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tools {
@@ -30,7 +32,7 @@ public class Tools {
         System.out.println("_____________");
     }
 
-    public static ListNode generateListNode(String str){
+    public static ListNode generateListNode(String str) {
         ListNode res = new ListNode(0);
         ListNode start = res;
         for (int i = 0; i < str.length(); i++) {
@@ -40,8 +42,42 @@ public class Tools {
         return start.next;
     }
 
+    public static TreeNode generateTreeNode(String str) {
+        if (str == null || str.equals("")) {
+            return null;
+        }
+        List<TreeNode> oldLineList = new ArrayList<>();
+        TreeNode head = new TreeNode(Integer.valueOf(str.substring(0, 1)));
+        oldLineList.add(head);
+        str = str.substring(1);
+
+        while (true) {
+            if (!str.equals("")) {
+                if (!str.substring(0, 1).equals(" ")) {
+                    TreeNode left = new TreeNode(Integer.valueOf(str.substring(0, 1)));
+                    oldLineList.add(left);
+                    oldLineList.get(0).left = left;
+                    str = str.substring(1);
+                } else {
+                    str = str.substring(1);
+                }
+            } else return head;
+            if (!str.equals("")) {
+                if (!str.substring(0, 1).equals(" ")) {
+                    TreeNode right = new TreeNode(Integer.valueOf(str.substring(0, 1)));
+                    oldLineList.add(right);
+                    oldLineList.get(0).right = right;
+                    str = str.substring(1);
+                    oldLineList.remove(0);
+                } else {
+                    str = str.substring(1);
+                }
+            } else return head;
+        }
+    }
+
     private static int getLengthOfInt(int arg) {
-        return arg == 0 ? 1 : (int)Math.log10(arg) + 1;
+        return arg == 0 ? 1 : (int) Math.log10(arg) + 1;
     }
 
     public static void main(String[] args) {
