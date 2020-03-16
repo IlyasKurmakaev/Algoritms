@@ -1,3 +1,5 @@
+package Tools;
+
 import Algoritms.ListNode;
 import Algoritms.TreeNode;
 
@@ -75,6 +77,8 @@ public class Tools {
             } else return head;
         }
     }
+
+    
 
     private static int getLengthOfInt(int arg) {
         return arg == 0 ? 1 : (int) Math.log10(arg) + 1;

@@ -1,26 +1,63 @@
-import Algoritms.*;
-import com.sun.javafx.scene.traversal.Algorithm;
-
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import Algoritms.GenerateTrees.GenerateTrees;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(new InorderTraversal().inorderTraversal(Tools.generateTreeNode("1 34")));
-//        System.out.println(new ReverseBetween().reverseBetween(Tools.generateListNode("35"), 1, 2));
+        System.out.println(new GenerateTrees().numTrees(19));
+
+          //________________________________________________________________________________
+//        TreeNode head = new TreeNode(1);
+//        head.left = new TreeNode(21);
+//        head.right = new TreeNode(22);
+//        head.left.right = new TreeNode(212);
+//        head.right.left = new TreeNode(3);
+//        head.right.left.right = new TreeNode(4);
+//        head.right.left.right.left = new TreeNode(5);
+
+//        WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
+//        ShowTree.setI(new ShowTree().new GenRandomTreeNode(4, 75));
+//        ShowTree.showTree();
+//        for (int i  = 0; i < 100000; i++) {
+//            ShowTree.repaintTree();
+//            try {
+//                Thread.sleep(1);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+
+        //WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
+
+//        System.out.println(Layer.layerTreeNodeBuilder(Tools.Tools.generateTreeNode("1 34")));
+//________________________________________________________
+//        int[][] matrix = new int[2][1];
+
+//        matrix[0][0] = 1;
+//        matrix[0][1] = 2;
+//        matrix[0][2] = 3;
+//        matrix[1][0] = 4;
+//        matrix[1][1] = 5;
+//        matrix[1][2] = 6;
+//        matrix[2][0] = 7;
+//        matrix[2][1] = 8;
+//        matrix[2][2] = 9;
+//        matrix[0][0] = 1;
+//        matrix[1][0] = 3;
+
+//        System.out.println(new SearchMatrix().searchMatrix(matrix, 3));
+//        System.out.println(new IsIsomorphic().isIsomorphic("bar","foo"));
+        //        System.out.println(new InorderTraversal().inorderTraversal(Tools.Tools.generateTreeNode("1 34")));
+//        System.out.println(new ReverseBetween().reverseBetween(Tools.Tools.generateListNode("35"), 1, 2));
 
 //        System.out.println(new SubsetsII().subsetsWithDup(new int[]{1,2,2}));
-        // System.out.println(new PartitionList().partition(Tools.generateListNode("45389157"), 3));
+        // System.out.println(new PartitionList().partition(Tools.Tools.generateListNode("45389157"), 3));
 
-        //        System.out.println(new DeleteDuplicates().deleteDuplicates(Tools.generateListNode("11233")));
+        //        System.out.println(new DeleteDuplicates().deleteDuplicates(Tools.Tools.generateListNode("11233")));
         //        System.out.println(new RotateList().rotateRight(ListNode.generateListNode(4), 1));
 //        System.out.println(new LengthOfLastWord().lengthOfLastWord("a"));
 
-//        Tools.printSquareArr(new Algoritms.Solution().generateMatrix(3));
+//        Tools.Tools.printSquareArr(new Algoritms.Solution().generateMatrix(3));
 
 //___________________________________________
 //        int[][] inArr = new int[2][2];
@@ -32,7 +69,7 @@ public class Main {
 //        int[] secondArr = new int[2];
 //        secondArr[0] = 2;
 //        secondArr[1] = 5;
-//        Tools.printSquareArr(new Algoritms.Solution().insert(inArr, secondArr));
+//        Tools.Tools.printSquareArr(new Algoritms.Solution().insert(inArr, secondArr));
         //______________________________________________
 //        int[][] inArr = new int[3][2];
 ////        inArr[0][0] = 1;
@@ -47,8 +84,8 @@ public class Main {
 //        inArr[1][1] = 4;
 //        inArr[2][0] = 5;
 //        inArr[2][1] = 6;
-//        //int[][] inArr = Tools.createIntSquareArr(5,2);
-//        Tools.printSquareArr(new Algoritms.Solution().merge(inArr));
+//        //int[][] inArr = Tools.Tools.createIntSquareArr(5,2);
+//        Tools.Tools.printSquareArr(new Algoritms.Solution().merge(inArr));
 
         //_________________________________________________
 //        System.out.println(new Algoritms.Solution().canJump(new int[]{4,2,0,0,1,1,4,4,4,0,4,0}));
@@ -56,8 +93,8 @@ public class Main {
 //        System.out.println(new Algoritms.Solution().canJump(new int[]{3,2,1,0,4}));
 
 //____________________________________________________________________________________________________________________
-//        int[][] inArr = Tools.createIntSquareArr(2,10);
-//        Tools.printSquareArr(inArr);
+//        int[][] inArr = Tools.Tools.createIntSquareArr(2,10);
+//        Tools.Tools.printSquareArr(inArr);
 //        List<Integer> res = new Algoritms.Solution().spiralOrder(inArr);
 //        for (int intPartRes : res) {
 //            System.out.print(intPartRes + " ");
