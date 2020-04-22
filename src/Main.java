@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //test
         TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[3,9,20,null,null,15,7]");
         System.out.println(new ZigzagLevelOrder().zigzagLevelOrder(tNString));
 
