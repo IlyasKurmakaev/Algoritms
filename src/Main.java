@@ -1,31 +1,58 @@
+import Algoritms.*;
 import Algoritms.GenerateTrees.GenerateTrees;
+import Tools.TreeTools.ShowTree.Graphics.WindowManager;
+import Tools.TreeTools.ShowTree.ShowTree;
+import Tools.TreeTools.SmallTreeTools;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        System.out.println(new GenerateTrees().numTrees(19));
+
+        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[3,9,20,null,null,15,7]");
+        System.out.println(new ZigzagLevelOrder().zigzagLevelOrder(tNString));
+
+        //______________________________________ isSymmetric
+//        TreeNode root = new TreeNode(0);
+//        root.left = new TreeNode(1);
+//        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[1,2,2,3,4,4,3] "); // [1,2,2,3,4,4,3]  [2,4,3,null,null,null,5,1]
+//        WindowManager.createFrame("1", ShowTree.layerTreeNodeBuilder(tNString));
+//        System.out.println(new IsSymmetric().isSymmetric(tNString));
+////        new RecoverTree().recoverTree(tNString);
+//        System.out.println(tNString);
+//        System.out.println(new GenerateTrees().numTrees(10));
 
           //________________________________________________________________________________
-//        TreeNode head = new TreeNode(1);
-//        head.left = new TreeNode(21);
-//        head.right = new TreeNode(22);
+//        TreeNode head = new TreeNode(2);
+//        head.left = new TreeNode(3);
+//        head.right = new TreeNode(1);
+//        new RecoverTree().recoverTree(head);
+
+//        TreeNode head = new TreeNode(3);
+//        head.left = new TreeNode(1);
+//        head.right = new TreeNode(5);
+//        head.left.left = new TreeNode(0);
+//        head.left.right = new TreeNode(2);
+//        head.right.left = new TreeNode(4);
+//        head.right.right = new TreeNode(6);
+//        head.left.right.right = new TreeNode(3);
 //        head.left.right = new TreeNode(212);
 //        head.right.left = new TreeNode(3);
 //        head.right.left.right = new TreeNode(4);
 //        head.right.left.right.left = new TreeNode(5);
-
-//        WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
-//        ShowTree.setI(new ShowTree().new GenRandomTreeNode(4, 75));
-//        ShowTree.showTree();
-//        for (int i  = 0; i < 100000; i++) {
-//            ShowTree.repaintTree();
-//            try {
-//                Thread.sleep(1);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
+     //   new IsValidBST().sout(head);
+     //   System.out.println(new IsValidBST().isValidBST(head));
+     //   WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
+        ShowTree.setI(new ShowTree().new GenRandomTreeNode(6, 75));
+        ShowTree.showTree();
+        for (int i  = 0; i < 100000; i++) {
+            ShowTree.repaintTree();
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
         //WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
 

@@ -11,9 +11,10 @@ public class WindowManager {
 
     private static MyCanvas canvas = null;
     private static JFrame window;
-    public static void createFrame(Layer layer) {
+    public static void createFrame(String name, Layer layer) {
         window = new JFrame("Tree node painter");
         window.setSize(WIDTH, HEIGHT);
+        window.setTitle(name);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

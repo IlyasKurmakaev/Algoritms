@@ -15,7 +15,7 @@ public class ShowTree {
         }
         TreeNode treeNode = i.genTreeNode();
         Layer layer = layerTreeNodeBuilder(treeNode);
-        WindowManager.createFrame(layer);
+        WindowManager.createFrame("null", layer);
     }
 
     public static void repaintTree() {
