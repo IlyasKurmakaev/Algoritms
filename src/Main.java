@@ -9,9 +9,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //test
-        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[3,9,20,null,null,15,7]");
-        System.out.println(new ZigzagLevelOrder().zigzagLevelOrder(tNString));
+        int[] arr = new int[5];
+        arr[0] = -10;
+        arr[1] = -3;
+        arr[2] = 0;
+        arr[3] = 5;
+        arr[4] = 9;
+        TreeNode root  = new SortedArrayToBST().sortedArrayToBST(arr);
+
+
+        WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(root));
+
+
+
+        //TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[3,9,20,null,null,15,7]");
+        //System.out.println(new ZigzagLevelOrder().zigzagLevelOrder(tNString));
 
         //______________________________________ isSymmetric
 //        TreeNode root = new TreeNode(0);
@@ -44,16 +56,29 @@ public class Main {
      //   new IsValidBST().sout(head);
      //   System.out.println(new IsValidBST().isValidBST(head));
      //   WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
-        ShowTree.setI(new ShowTree().new GenRandomTreeNode(6, 75));
-        ShowTree.showTree();
-        for (int i  = 0; i < 100000; i++) {
-            ShowTree.repaintTree();
-            try {
-                Thread.sleep(300);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+
+
+
+
+
+
+
+//        ShowTree.setI(new ShowTree().new GenRandomTreeNode(6, 75));
+//        ShowTree.showTree();
+//        for (int i  = 0; i < 100000; i++) {
+//            ShowTree.repaintTree();
+//            try {
+//                Thread.sleep(300);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//
+
+
+
+
 
         //WindowManager.createFrame(ShowTree.layerTreeNodeBuilder(head));
 
