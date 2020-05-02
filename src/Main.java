@@ -8,17 +8,27 @@ public class Main {
 
 
     public static void main(String[] args) {
+        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[1,2,2,3,3,null,null,4,4]");
+        new Thread(() -> WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString))).run();
 
-        int[] arr = new int[5];
-        arr[0] = -10;
-        arr[1] = -3;
-        arr[2] = 0;
-        arr[3] = 5;
-        arr[4] = 9;
-        TreeNode root  = new SortedArrayToBST().sortedArrayToBST(arr);
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
-        WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(root));
+        new IsBalanced().isBalanced(tNString);
+//        int[] arr = new int[5];
+//        arr[0] = -10;
+//        arr[1] = -3;
+//        arr[2] = 0;
+//        arr[3] = 5;
+//        arr[4] = 9;
+//        TreeNode root  = new SortedArrayToBST().sortedArrayToBST(arr);
+//        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[1,null,2,null,3]");
+//        WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString));
+//        System.out.println(new IsBalanced().isBalanced(tNString));
 
 
 
