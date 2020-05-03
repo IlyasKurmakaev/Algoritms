@@ -8,6 +8,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+
         TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[1,2,2,3,3,null,null,4,4]");
         new Thread(() -> WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString))).run();
 
