@@ -73,6 +73,7 @@ public class SmallTreeTools {
             Integer temp = null;
             Pattern numPattern;
             Pattern abcPattern;
+            int minus = 1;
             for (int i = 0; i < argStr.length(); i++) {
                 String subStr = argStr.substring(i, i + 1);
 
@@ -81,22 +82,30 @@ public class SmallTreeTools {
                 Matcher numMatcher = numPattern.matcher(subStr);
                 Matcher abcMatcher = abcPattern.matcher(subStr);
 
+
+
                 if (subStr.equals("[")) {
                     continue;
                 } else if (numMatcher.find()) {
                     if (temp == null) {
-                        temp = Integer.parseInt(subStr);
+                        temp = Integer.parseInt(subStr) * (minus);
                     } else {
-                        temp = temp * 10 + Integer.parseInt(subStr);
+                        temp = temp * 10 + Integer.parseInt(subStr) * minus;
                     }
                 } else if (subStr.equals(",") || subStr.equals("]")) {
                     if (temp == null) {
                         res.add(null);
+                        minus = 1;
                     } else {
                         res.add(temp);
                         temp = null;
+                        minus = 1;
                     }
-                } else if (abcMatcher.find()) {
+                } else if (subStr.equals("-")) {
+                    minus = -1;
+                }
+
+                else if (abcMatcher.find()) {
                     continue;
                 }
             }

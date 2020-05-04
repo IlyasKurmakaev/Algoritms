@@ -7,19 +7,32 @@ import Tools.TreeTools.SmallTreeTools;
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[1,2,2,3,3,null,null,4,4]");
+// _____________________________________//Task 110 Easy________________________________________________________________
+        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("1,-2,-3,1,3,-2,null,-1"); // ([-2,null,-3] -2)
         new Thread(() -> WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString))).run();
 
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(200);
+
+        System.out.println(new HasPathSum().hasPathSum(tNString, -4));
 
 
-        new IsBalanced().isBalanced(tNString);
+
+
+// _____________________________________//Task 110 Easy________________________________________________________________
+//        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[1,2,2,3,3,null,null,4,4]");
+//        new Thread(() -> WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString))).run();
+//
+//        try {
+//            Thread.sleep(200);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//        new IsBalanced().isBalanced(tNString);
+// ____________________________________________________________________________________________________________________
 //        int[] arr = new int[5];
 //        arr[0] = -10;
 //        arr[1] = -3;

@@ -1,5 +1,6 @@
 package Algoritms;
 //Task 111 Easy. Minimum Depth of Binary Tree https://leetcode.com/problems/minimum-depth-of-binary-tree/
+//Success
 //Runtime: 1 ms, faster than 9.63% of Java online submissions for Minimum Depth of Binary Tree.
 //Memory Usage: 41.4 MB, less than 6.25% of Java online submissions for Minimum Depth of Binary Tree.
 import java.util.LinkedList;
