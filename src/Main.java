@@ -1,5 +1,6 @@
 import Algoritms.*;
 import Algoritms.GenerateTrees.GenerateTrees;
+import Tools.TreeTools.ShowTree.DebugTools;
 import Tools.TreeTools.ShowTree.Graphics.WindowManager;
 import Tools.TreeTools.ShowTree.ShowTree;
 import Tools.TreeTools.SmallTreeTools;
@@ -8,15 +9,24 @@ public class Main {
 
 
     public static void main(String[] args) throws InterruptedException {
+// _____________________________________//Task 113 Medium________________________________________________________________
+    TreeNode tn = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[5,4,8,11,null,13,4,7,2,null,null,5,1]");
+        DebugTools.showInCode(Main.class, tn);
+        System.out.println(new PathSumTwo().pathSum(tn, 22));
 
-// _____________________________________//Task 111 Easy________________________________________________________________
-        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("1,-2,-3,1,3,-2,null,-1"); // ([-2,null,-3] -2)
-        new Thread(() -> WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString))).run();
 
-        Thread.sleep(200);
+// _____________________________________//Task 112 Easy________________________________________________________________
+//        TreeNode tNString = new SmallTreeTools().makeTreeNodeFromLeetCodeString("1,-2,-3,1,3,-2,null,-1"); // ([-2,null,-3] -2)
+//        new Thread(() -> WindowManager.createFrame("text", ShowTree.layerTreeNodeBuilder(tNString))).run();
+//
+//        Thread.sleep(200);
+//
+//        System.out.println(new HasPathSum().hasPathSum(tNString, -4));
 
-        System.out.println(new HasPathSum().hasPathSum(tNString, -4));
-
+//_______________________________________//Task 111 Easy________________________________________________________________
+//        TreeNode tn = new SmallTreeTools().makeTreeNodeFromLeetCodeString("[3,9,20,null,null,15,7]");
+//
+//        System.out.println(new MinDepth().minDepth(tn));
 
 
 
