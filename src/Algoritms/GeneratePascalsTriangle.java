@@ -1,5 +1,6 @@
 package Algoritms;
 //Task 118 Easy. Pascal's Triangle https://leetcode.com/problems/pascals-triangle/
+//Success
 //Runtime: 0 ms, faster than 100.00% of Java online submissions for Pascal's Triangle.
 //Memory Usage: 37.5 MB, less than 6.02% of Java online submissions for Pascal's Triangle.
 import java.util.LinkedList;
