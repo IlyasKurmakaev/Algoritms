@@ -3,6 +3,8 @@ package Algoritms;
 //Success
 //Runtime: 993 ms, faster than 5.04% of Java online submissions for Best Time to Buy and Sell Stock.
 //Memory Usage: 39.7 MB, less than 13.27% of Java online submissions for Best Time to Buy and Sell Stock.
+import org.junit.Assert;
+import org.junit.Test;
 import java.util.*;
 
 
@@ -56,9 +58,17 @@ public class MaxProfit {
         return maxProfit;
     }
 
+    @Test
+    public void testMaxProfit(){
+        int[] arr1 = new int[]{3,2,6,5,0,3};
+        int[] arr2 = new int[]{3,2,6,5,0,3};
+        Assert.assertEquals(new MaxProfit().maxProfit(arr1), 4);
+        Assert.assertEquals(new MaxProfit().maxProfit(arr2), 4);
+        Assert.assertEquals(new MaxProfit().maxProfit2(arr1), 4);
+        Assert.assertEquals(new MaxProfit().maxProfit2(arr2), 4);
+    }
+
     public static void main(String[] args) {
-//        System.out.println(new MaxProfit().maxProfit1(new int[]{7, 1, 5, 3, 6, 4}));
-//        System.out.println(new MaxProfit().maxProfit2(new int[]{7, 1, 5, 3, 6, 4}));
         System.out.println(new MaxProfit().maxProfit2(new int[]{3,2,6,5,0,3}));
     }
 }
