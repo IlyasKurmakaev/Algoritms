@@ -34,6 +34,19 @@ public class Tools {
         System.out.println("_____________");
     }
 
+    public static void printSquareArr(char[][] argArr) {
+        for (int i = 0; argArr.length > i; i++) {
+            for (int j = 0; argArr[0].length > j; j++) {
+                System.out.print(argArr[i][j]);
+                for (int iSpace = 0; iSpace < getLengthOfInt(argArr.length * argArr[0].length) + 1 - getLengthOfInt(argArr[i][j]); iSpace++) {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("_____________");
+    }
+
     public static ListNode generateListNode(String str) {
         ListNode res = new ListNode(0);
         ListNode start = res;
