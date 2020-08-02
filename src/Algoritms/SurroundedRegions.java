@@ -6,6 +6,7 @@ package Algoritms;
 
 
 import org.junit.Assert;
+import org.junit.Test;
 
 import java.util.*;
 
@@ -310,7 +311,7 @@ public class SurroundedRegions {
     static char[][] testCaseOneInput = {{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}};
     static char[][] testCaseOneExpected  = {{'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'O', 'X', 'X'}};
 
-    //@Test
+    @Test
     public void test() {
         solve(testCaseOneInput);
         Assert.assertEquals(testCaseOneInput, testCaseOneExpected);
