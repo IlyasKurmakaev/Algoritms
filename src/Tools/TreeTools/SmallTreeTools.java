@@ -1,5 +1,6 @@
 package Tools.TreeTools;
 
+import Algoritms.ListNode;
 import Algoritms.TreeNode;
 import Tools.TreeTools.ShowTree.Graphics.WindowManager;
 import Tools.TreeTools.ShowTree.ShowTree;
@@ -58,6 +59,22 @@ public class SmallTreeTools {
             treeNodes.remove(0);
             return root.right;
         }
+    }
+
+    public ListNode makeLinkedListFromLeetCodeString(String argStr) {
+        List<Integer> integers = new Utillls().parceStringInIntegers(argStr);
+        ListNode tempListNode = null;
+        ListNode head = null;
+        for (int i = 0; i < integers.size(); i++) {
+            if (i == 0) {
+                tempListNode = new ListNode(integers.get(0));
+                head = tempListNode;
+            } else {
+                tempListNode.next = new ListNode(integers.get(i));
+                tempListNode = tempListNode.next;
+            }
+        }
+        return head;
     }
 
 

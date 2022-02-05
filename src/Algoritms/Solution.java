@@ -1344,6 +1344,42 @@ public class Solution {
         return biggestSequence;
     }
 
+    private ListNode reverseListNodes(ListNode listNode) {
+        if (listNode == null) {
+            return null;
+        }
+        if (listNode.next == null) {
+            return listNode;
+        }
+        ListNode currentNode = listNode;
+        ListNode nextNode = listNode.next;
+        ListNode prevNode = null;
+        while (currentNode != null) {
+            currentNode.next = prevNode;
+
+            prevNode = currentNode;
+            if (nextNode == null) {
+                return currentNode;
+            }
+            currentNode = nextNode;
+            nextNode = nextNode.next;
+        }
+        return currentNode;
+    }
+
+    public static void main(String[] args) {
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode2 = new ListNode(2);
+        ListNode listNode3 = new ListNode(3);
+        ListNode listNode4 = new ListNode(4);
+        listNode1.next = listNode2;
+        listNode2.next = listNode3;
+        listNode3.next = listNode4;
+        System.out.println(listNode1);
+        ListNode reversedListNode = new Solution().reverseListNodes(listNode1);
+        System.out.println(reversedListNode);
+    }
+
 
     public void changeInt(Integer a) {
         a = 1;
