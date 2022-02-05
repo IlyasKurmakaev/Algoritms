@@ -6,14 +6,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class WindowManager {
-    private static final int WIDTH = 1800;
-    private static final int HEIGHT = 800;
+    private static int width = 1800;
+    private static int height = 800;
 
     private static MyCanvas canvas = null;
     private static JFrame window;
     public static void createFrame(String name, Layer layer) {
         window = new JFrame("Tree node painter");
-        window.setSize(WIDTH, HEIGHT);
+        window.setSize(width, height);
         window.setTitle(name);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -30,6 +30,11 @@ public class WindowManager {
     public static void repaintFrame(Layer layer){
         canvas.setLayer(layer);
         canvas.repaint();
+    }
+
+    public static void setWidthAndHeight(int width, int height) {
+        WindowManager.width = width;
+        WindowManager.height = height;
     }
 
     public static int getWidth () {
