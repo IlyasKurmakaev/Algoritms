@@ -79,37 +79,4 @@ public class InsertionSortList {
         listNode3.next = listNode4;
         System.out.println(new InsertionSortList().insertionSortList(listNode1));
     }
-
-//    public ListNode insertionSortList(ListNode head) {
-//        if (head == null) return null;
-//        if (head.next == null) return head;
-//        ListNode headOfRes = new ListNode(head.val);
-//        head = head.next;
-//        while (head != null) {
-//            insertNode(iterateForInsertPlace(headOfRes, head.val), new ListNode(head.val));
-//        }
-//        return headOfRes;
-//    }
-//
-//    private ListNode insertNode(ListNode headOfRes, ListNode listNode, ListNode insertionNode) {
-//        if (listNode == null) {
-//
-//        }
-//        ListNode temp = listNode.next;
-//        listNode.next = insertionNode;
-//        insertionNode.next = temp;
-//        return headOfRes;
-//    }
-//
-//    private ListNode iterateForInsertPlace(ListNode head, int value) {
-//        if (head.next == null) return null;
-//        while (head.next != null) {
-//            if (head.next.val >= value) {
-//                return head;
-//            } else {
-//                head = head.next;
-//            }
-//        }
-//        return head;
-//    }
 }
